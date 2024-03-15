@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width initial-scale=1.0">
+   <title>a</title>
+ </head>
+   <body>
+      <script>
+      function calcularBhaskara(a, b, c) {
+
+    const discriminante = b * b - 4 * a * c;
+
+   
+    let raiz1, raiz2;
+
+    
+    if (discriminante > 0) {
+        
+        raiz1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+        raiz2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+        return [raiz1, raiz2];
+    } else if (discriminante === 0) {
+        
+        raiz1 = -b / (2 * a);
+        return [raiz1];
+    } else {
+
+        const parteReal = -b / (2 * a);
+        const parteImaginaria = Math.sqrt(-discriminante) / (2 * a);
+        return [parteReal + " + " + parteImaginaria + "i", parteReal + " - " + parteImaginaria + "i"];
+    }
+}
+
+
+      </script>
+   </body>
+</html>
